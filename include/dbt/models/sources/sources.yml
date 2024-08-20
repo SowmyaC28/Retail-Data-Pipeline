@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: retail
+    database: retail-data-pipeline-432716
+
+    tables:
+      - name: raw_invoices
+      - name: country 
