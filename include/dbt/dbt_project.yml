@@ -1,5 +1,10 @@
 name: 'retail'
 
+version: '1.0'  # Add this line
+
+config-version: 2  # Ensure this is set to 2
+
+
 profile: 'retail'
 
 models:
