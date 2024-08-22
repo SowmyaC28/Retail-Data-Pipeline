@@ -1,4 +1,5 @@
 from airflow.decorators import dag,task
+from airflow.models.baseoperator import chain
 from datetime import datetime
 from airflow.providers.google.cloud.transfers.local_to_gcs import LocalFilesystemToGCSOperator
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
@@ -56,7 +57,7 @@ def retail():
         
         return check(scan_name, checks_subpath)
     
-    check_load()
+    
     
     transform = DbtTaskGroup(
         group_id = 'transform',
@@ -75,7 +76,7 @@ def retail():
 
         return check(scan_name, checks_subpath)
     
-    check_transform()
+    
     
     
     report = DbtTaskGroup(
@@ -86,6 +87,26 @@ def retail():
             load_method = LoadMode.DBT_LS,
             select=['path:models/report']
         )
+    )
+    
+    @task.external_python(python='/usr/local/airflow/soda_venv/bin/python')
+    def check_report(scan_name='check_report', checks_subpath='report'):
+        from include.soda.check_function import check
+
+        return check(scan_name, checks_subpath)
+    
+    
+    
+    
+    chain(
+        upload_csv_to_gcs,
+        create_retail_dataset,
+        gcs_to_raw,
+        check_load(),
+        transform,
+        check_transform(),
+        report,
+        check_report()
     )
     
 retail()
