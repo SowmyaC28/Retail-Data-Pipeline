@@ -4,16 +4,7 @@
 WITH datetime_cte AS (  
   SELECT DISTINCT
     InvoiceDate AS datetime_id,
-    CASE
-      WHEN LENGTH(InvoiceDate) = 16 THEN
-        -- Date format: "DD/MM/YYYY HH:MM"
-        PARSE_DATETIME('%m/%d/%Y %H:%M', InvoiceDate)
-      WHEN LENGTH(InvoiceDate) <= 14 THEN
-        -- Date format: "MM/DD/YY HH:MM"
-        PARSE_DATETIME('%m/%d/%y %H:%M', InvoiceDate)
-      ELSE
-        NULL
-    END AS date_part,
+    PARSE_DATETIME('%Y-%m-%d %H:%M:%S', InvoiceDate) AS date_part,
   FROM {{ source('retail', 'raw_invoices') }}
   WHERE InvoiceDate IS NOT NULL
 )
