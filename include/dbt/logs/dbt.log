@@ -22620,3 +22620,35 @@ ORDER BY dt.year, dt.month
 [0m04:48:36.184508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a87f497-67d2-4e41-a60a-de9399bdc037', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a2fed10>]}
 [0m04:48:36.185258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99bdb550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99bdbb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99bdb390>]}
 [0m04:48:36.185517 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-08-23 04:49:09.268078 | 40ec2909-fe9a-4ab5-a294-40ea940be188 ==============================
+[0m04:49:09.268078 [info ] [MainThread]: Running with dbt=1.4.9
+[0m04:49:09.269313 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'profile': 'retail', 'target': 'dev', 'resource_types': [], 'output': 'json', 'select': ['path:models/transform'], 'indirect_selection': 'eager', 'which': 'list'}
+[0m04:49:09.269706 [debug] [MainThread]: Tracking: tracking
+[0m04:49:09.271086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69f7ca90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69f9ac90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69f9b550>]}
+[0m04:49:09.279962 [debug] [MainThread]: checksum: 92ac18e3946ee15d4e746c8727084f9c56105a52d4376fcc276fb9af4f10a87c, vars: {}, profile: retail, target: dev, version: 1.4.9
+[0m04:49:09.318207 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m04:49:09.318476 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m04:49:09.321405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '40ec2909-fe9a-4ab5-a294-40ea940be188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69ed9ad0>]}
+[0m04:49:09.328873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '40ec2909-fe9a-4ab5-a294-40ea940be188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69fa8690>]}
+[0m04:49:09.329148 [info ] [MainThread]: Found 7 models, 0 tests, 0 snapshots, 0 analyses, 451 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+[0m04:49:09.329381 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '40ec2909-fe9a-4ab5-a294-40ea940be188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6a147c50>]}
+[0m04:49:09.330086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff71f5d850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6b13c950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff69fb1e50>]}
+[0m04:49:09.330307 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2024-08-23 04:49:11.573591 | df109cab-6568-4bda-a215-14214b944726 ==============================
+[0m04:49:11.573591 [info ] [MainThread]: Running with dbt=1.4.9
+[0m04:49:11.574895 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'profile': 'retail', 'target': 'dev', 'resource_types': [], 'output': 'json', 'select': ['path:models/report'], 'indirect_selection': 'eager', 'which': 'list'}
+[0m04:49:11.575214 [debug] [MainThread]: Tracking: tracking
+[0m04:49:11.582049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87b589d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff85d7add0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff85d5aa50>]}
+[0m04:49:11.591539 [debug] [MainThread]: checksum: 92ac18e3946ee15d4e746c8727084f9c56105a52d4376fcc276fb9af4f10a87c, vars: {}, profile: retail, target: dev, version: 1.4.9
+[0m04:49:11.628749 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m04:49:11.629065 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m04:49:11.632079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df109cab-6568-4bda-a215-14214b944726', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff85c55ed0>]}
+[0m04:49:11.639819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df109cab-6568-4bda-a215-14214b944726', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff85d835d0>]}
+[0m04:49:11.640109 [info ] [MainThread]: Found 7 models, 0 tests, 0 snapshots, 0 analyses, 451 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+[0m04:49:11.640344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df109cab-6568-4bda-a215-14214b944726', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8649ef90>]}
+[0m04:49:11.641051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7db7350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91979090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86e0a7d0>]}
+[0m04:49:11.641300 [debug] [MainThread]: Flushing usage events

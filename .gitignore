@@ -11,4 +11,4 @@ airflow.cfg
 airflow.db
 include/gcp/service_account.json
 include/soda/configuration.yml
-include/metabase-data
+include/metabase-data/
