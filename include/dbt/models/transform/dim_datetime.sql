@@ -17,4 +17,4 @@ SELECT
   EXTRACT(HOUR FROM date_part) AS hour,
   EXTRACT(MINUTE FROM date_part) AS minute,
   EXTRACT(DAYOFWEEK FROM date_part) AS weekday
-FROM datetime_cte
+FROM datetime_cte 
